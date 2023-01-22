@@ -8,7 +8,29 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+<label for="evaluatedText">Enter Yoyr Word</label>
+<input type="text" id="evaluatedTex" name="evaluatedTex"  value="word">
+
+<h3 id="letterCount">0</h3>
+
+<!--Access the elements to add behavior (use events)-->
+<script>
+
+let evaluatedText= document.getElementById("evaluatedText")
+let letterCount= document.getElementById("letterCount")
+
+evaluatedText.addEventListener("evaluatedText",calculateLength)
+
+function calculateLength() {
+
+	let word = evaluatedText.value;
+	let wordLength= word.length;
+	letterCount.innerHTML= wordLength;
+	 
+}
+
+
+
 </script>
 
 </body>
